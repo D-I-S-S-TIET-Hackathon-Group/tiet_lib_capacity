@@ -1,13 +1,16 @@
 import numpy as np
 import cv2
 
-img_path = 'training_imgs/'
+img_path = 'training_imgs/image_test_snap2.jpg'
 proto_path = 'models/MobileNetSSD_deploy.prototxt.txt'
 model_path = 'models/MobileNetSSD_deploy.caffemodel'
 
 min_confidence = 0.2
 
-classes = ["chair"]
+classes = ["background", "aeroplane", "bicycle",
+           "bird", "boat", "bottle", "bus", "car", "cat",
+           "chair", "cow", "diningtable", "dog", "horse", "motorbike",
+           "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"]
 
 np.random.seed(8008135)
 colors = np.random.uniform(0, 255, size=(len(classes), 3))
@@ -27,7 +30,6 @@ for i in range(detected_obj.shape[2]):
     confidence = detected_obj[0][0][i][2]
     if confidence > min_confidence:
         ind = int(detected_obj[0][0][i][1])
-
         upper_left_x = int(detected_obj[0][0][i][3] * w)
         upper_left_y = int(detected_obj[0][0][i][4] * h)
         lower_right_x = int(detected_obj[0][0][i][5] * w)
@@ -44,6 +46,6 @@ for i in range(detected_obj.shape[2]):
                     )
         
     cv2.imshow("DETECTED OBJECTS", img)
-    cv2.waitkey(0)
+    cv2.waitKey(0)
     cv2.destroyAllWindows()
 
