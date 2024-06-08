@@ -4,14 +4,14 @@ import cv2
 capture = cv2.VideoCapture('/content/drive/MyDrive/libvid.mp4')
 
 if capture.isOpened():
-    delay_time = 1000  # Delay time for 1 fps
+    delay_time = 1000  
 
     while True:
         isTrue, frame = capture.read()
         if not isTrue:
             print("Error: Could not read frame.")
             break
-        cv2_imshow(frame)  # Keep this line for displaying frame
+        cv2_imshow(frame)
         if cv2.waitKey(delay_time) & 0xFF == ord('d'):
             break
 
@@ -34,15 +34,10 @@ drive.mount('/content/drive')
 nc: 2  
 names: ['chair unoccupied', 'occupied'] 
 
-train: '/content/drive/MyDrive/Labelled images.zip' 
-#val: '/content/drive/MyDrive/your_folder/val'  # Folder containing labeled validation images (optional for evaluation)
+train: '/content/drive/MyDrive/Labelled images.zip'  
 
-# Input image resolution
 img_size: [848, 478]  # Adjust if needed based on your image size
-
-# Other hyperparameters (learning rate, batch size, etc.)
-# Refer to YOLOv8 documentation for detailed explanations of these parameters
-hyp: 'data/yolov8s.yaml'  # Start with a pre-trained model's hyperparameters (e.g., yolov8s.yaml)
+hyp: 'data/yolov8s.yaml' 
 val: /content/drive/MyDrive/lib.zip
 
 nc: 2 
