@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    height: 100vh;
+    width: 50vh;
+    padding: 200px;
+    
+
+}
+ 
+.seat{
+    background: black;
+    border-radius: 5px;
+    background-color: bisque;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.row{
+    display: flex;
+} 
+
+.seat.occupied{
+    background-color: red;
+
+}
+
+.seat.vacant{
+    background-color: green;
+}
+
+.seat:nth-of-type(2){
+    margin-left: 20px;
+    margin-right: 50px;
+
+
+}
+
+.seat:nth-of-type(4){
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.seat:nth-of-type(6){
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.seat:nth-of-type(8){
+    margin-left: 20px;
+}
+
+.colourcode{
+    background: black;
+    list-style: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+}
+
+.gate{
+    background-color: white;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    padding-left: 250px;
+    height: 50px;
+    width: 100%;
+    margin: 10px;
+}
+
+.logo{
+    color: bisque;
+    height:100vh;
+    font-size: 35px;
+    
+}
+
+#clock{
+    display: flex;
+    height: 100vh;
+    padding-top: 60px;
+    font-family: Impact;
+    font-size:25px;
+    padding-top: 20px;
+    padding-left: 230px;
+ }
+
+ 
