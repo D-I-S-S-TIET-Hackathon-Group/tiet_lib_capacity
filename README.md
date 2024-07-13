@@ -3,5 +3,7 @@ This is an image recognition driven site that allows all TIET students to track 
 
 This project has been temporarily abandoned, and might be continued/passed down in the next semester.
 
+You stink of poo poo.
+
 _Built for IntraCCS Hackathon - 2024_
 _Built by Drishti, Ikansh, Siddhi, Shreyas._
